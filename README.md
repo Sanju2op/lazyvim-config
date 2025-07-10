@@ -25,7 +25,7 @@ This setup is beginner-friendly, snappy, and perfect for daily development in WS
 
 ## 🛠 Installation
 
-git clone https://github.com/YOUR_USERNAME/lazyvim-config.git ~/.config/nvim
+git clone https://github.com/sanju2op/lazyvim-config.git ~/.config/nvim
 
 Then launch Neovim:
 

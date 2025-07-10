@@ -8,7 +8,7 @@ return {
     harpoon:setup()
 
     vim.keymap.set("n", "<leader>ha", function()
-      harpoon:list():append()
+      harpoon:list():add()
     end, { desc = "Harpoon add file" })
     vim.keymap.set("n", "<leader>hh", function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
@@ -25,5 +25,10 @@ return {
     vim.keymap.set("n", "<leader>h4", function()
       harpoon:list():select(4)
     end, { desc = "Harpoon 4" })
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      callback = function()
+        harpoon:list():add()
+      end,
+    })
   end,
 }
